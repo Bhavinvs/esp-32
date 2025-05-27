@@ -1,8 +1,8 @@
 # ESP32 LED Blink Project (Wokwi)
 
-This is a simple ESP32 project created using [Wokwi](https://wokwi.com/) to **blink an LED** for a specific duration.
+This is a simple ESP32 project created using [Wokwi](https://wokwi.com) to **blink an LED** for a specific duration.
 
-## 🔧 Project Description
+## 💡 Project Description
 
 The ESP32 turns an LED on and off for a defined period of time. This is a basic project for learning how to control GPIO pins using Arduino code.
 
@@ -10,25 +10,23 @@ The ESP32 turns an LED on and off for a defined period of time. This is a basic 
 
 - `sketch.ino` – Main code to blink the LED.
 - `diagram.json` – Wokwi circuit diagram (ESP32 + LED).
-- `wokwi-project.txt` – Optional notes or configuration.
+- `wokwi-project-1.txt` – Optional notes or original simulation link.
 
-## 🚀 How to Run the Project
+## ▶️ Run the Simulation
 
-1. Go to [Wokwi ESP32 simulator](https://wokwi.com/).
-2. Create a new ESP32 project.
-3. Replace the default files with these:
-   - `sketch.ino`
-   - `diagram.json`
-4. Click **Start Simulation**.
+Click the link below to simulate this project on Wokwi:
 
-You should see the LED blinking according to the programmed timing.
+👉 **[Click here to open the simulation](https://wokwi.com/projects/431572583355525121)**
 
-## ✅ What You Learn
+No installation required — just press the "Start" button to run it.
 
-- How to control digital output (LED) with ESP32.
-- How to use `delay()` and GPIO pins.
-- How to simulate ESP32 projects on Wokwi.
+## 🔧 How to Customize
 
----
-This is a beginner-friendly project and a great first step into working with ESP32 microcontrollers.
+- Change the delay time to modify blink speed.
+- Add more LEDs or sensors for extended functionality.
 
+## 📚 Learning Focus
+
+- ESP32 GPIO basics
+- Delay function and timing
+- Microcontroller circuit simulation
