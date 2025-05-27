@@ -1,34 +1,34 @@
-# ESP32 Traffic Lights Project (Wokwi)
+# ESP32 Traffic Light Simulation Project (Wokwi)
 
-This is a simple ESP32 project created using [Wokwi](https://wokwi.com) to **simulate traffic lights using LEDs**.
+This is a simple ESP32 project that simulates a traffic light system using LEDs, created using [Wokwi](https://wokwi.com) simulator.
 
-## 🛠️ Project Description
+## 🚦 Project Description
 
-The ESP32 controls three LEDs (Red, Yellow, Green) to mimic a traffic light system with defined timing for each signal. This is a basic project to demonstrate sequencing and timing using GPIO pins and Arduino code.
+This project demonstrates how to simulate a basic traffic light (Red, Yellow, Green) using the ESP32 microcontroller. Each LED turns ON for a defined period to represent real-world traffic light behavior. This is helpful for understanding GPIO control, timing, and sequencing.
 
 ## 📁 Files in This Repository
 
-- `sketch.ino` – Main code for traffic light control logic.  
-- `diagram.json` – Wokwi circuit diagram (ESP32 + traffic LEDs).  
-- `traffic-project.txt` – Optional notes or configuration.
+- `sketch.ino` – Arduino code to control the traffic light sequence.
+- `diagram.json` – Circuit layout for ESP32 with 3 LEDs (Red, Yellow, Green).
+- `wokwi-project.txt` – Optional notes or raw link to the Wokwi simulation.
 
-## 💡 How to Run the Project
+## ▶️ Run the Simulation
 
-1. Open [Wokwi](https://wokwi.com/).
-2. Upload the contents of this repository (or open using the `.json` project file).
-3. Press the **Play** button to simulate the ESP32 running the traffic light system.
-4. Watch the LEDs switch in the standard traffic light sequence.
+You can simulate this project directly in your browser using Wokwi:
 
-## ✅ Features
+👉 **[Click here to open the simulation](https://wokwi.com/projects/431716452588841985)**
 
-- Simple simulation of traffic light timing.
-- Adjustable durations for each signal.
-- Easy-to-understand ESP32 and Arduino implementation.
+No downloads required — just click the link, press the green "Start" button, and see the traffic lights in action!
 
-## 📚 Learn More
+## 🔧 How to Customize
 
-You can learn more about ESP32 and Wokwi by visiting:
+- Adjust LED timing in `sketch.ino` for different light durations.
+- Try adding a pedestrian signal or button input for more complexity.
 
-- [ESP32 Documentation](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/)
-- [Wokwi ESP32 Guide](https://docs.wokwi.com/parts/wokwi-esp32-devkit-v1)
+## 📚 Learning Focus
+
+- GPIO control on ESP32
+- LED sequencing and delay timing
+- Real-world system simulation using microcontrollers
+
 
