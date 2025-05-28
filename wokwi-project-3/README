@@ -1,5 +1,5 @@
 # ESP32 LED Control with Button Press
-
+ 
 ## 🚦 Project Description
 
 This project demonstrates how to control an LED using a push button with the ESP32 microcontroller. The LED turns on when the button is pressed and held, and turns off when the button is released. This setup is ideal for understanding basic digital input and output operations with the ESP32.
