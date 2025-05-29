@@ -1,5 +1,5 @@
 # ESP32 LED Control with Two Switches
-
+ 
 🚦 **Project Description**  
 This project demonstrates how to control an LED using two push buttons with the ESP32 microcontroller. One button turns the LED ON, and the other turns it OFF. This setup is ideal for understanding digital input logic control using multiple input sources with the ESP32.
 
