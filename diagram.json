@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "author": "V S Bhavinkrishna",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": 6.9,
+      "left": 148.5,
+      "rotate": 90,
+      "attrs": { "volume": "0.1" }
+    },
+    {
+      "type": "wokwi-pushbutton-6mm",
+      "id": "btn1",
+      "top": 113,
+      "left": -96,
+      "attrs": { "color": "green", "xray": "1" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 62.4,
+      "left": -77.35,
+      "rotate": 90,
+      "attrs": { "value": "10000" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:GND.2", "bz1:1", "black", [ "v0", "h43.24" ] ],
+    [ "esp:5", "bz1:2", "green", [ "h0" ] ],
+    [ "esp:3V3", "r1:1", "green", [ "h0" ] ],
+    [ "r1:2", "btn1:1.r", "green", [ "h0", "v18" ] ],
+    [ "esp:27", "btn1:1.r", "green", [ "h-43.01", "v-9.6" ] ],
+    [ "esp:GND.1", "btn1:2.r", "black", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
