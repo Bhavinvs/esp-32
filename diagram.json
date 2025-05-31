@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "author": "V S Bhavinkrishna",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": 40.8,
+      "left": 165,
+      "rotate": 90,
+      "attrs": { "volume": "0.1" }
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr1",
+      "top": 41.6,
+      "left": -191.2,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:GND.2", "bz1:1", "black", [ "v0", "h52.84" ] ],
+    [ "bz1:2", "esp:5", "green", [ "h-35.7", "v13.7" ] ],
+    [ "esp:3V3", "ldr1:VCC", "green", [ "h-23.81" ] ],
+    [ "esp:GND.1", "ldr1:GND", "black", [ "h0" ] ],
+    [ "esp:34", "ldr1:DO", "green", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
