@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "author": "V S Bhavinkrishna",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -9.6, "left": 43.24, "attrs": {} },
+    { "type": "wokwi-photoresistor-sensor", "id": "ldr1", "top": 32, "left": -162.4, "attrs": {} },
+    { "type": "wokwi-relay-module", "id": "relay1", "top": 67.4, "left": 182.4, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 116.8,
+      "left": 330.6,
+      "attrs": { "color": "red", "flip": "1" }
+    },
+    { "type": "wokwi-vcc", "id": "vcc1", "top": 0.76, "left": 192, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 167.15,
+      "left": 268.8,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:34", "ldr1:DO", "green", [ "h-19.05", "v9.6" ] ],
+    [ "esp:GND.1", "ldr1:GND", "black", [ "h0" ] ],
+    [ "esp:GND.3", "relay1:GND", "black", [ "h0" ] ],
+    [ "esp:4", "relay1:IN", "green", [ "h28.8" ] ],
+    [ "ldr1:VCC", "esp:3V3", "red", [ "h19.2", "v-28.8" ] ],
+    [ "relay1:VCC", "vcc1:VCC", "red", [ "h0", "v-57.6" ] ],
+    [ "esp:GND.2", "led1:C", "black", [ "v0", "h28.8", "v-48", "h249.6", "v192" ] ],
+    [ "esp:3V3", "relay1:COM", "green", [ "h-9.45", "v-28.8", "h297.6", "v105.6" ] ],
+    [ "relay1:NO", "r1:1", "green", [ "h20.4", "v55.8", "h-48" ] ],
+    [ "r1:2", "led1:A", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
