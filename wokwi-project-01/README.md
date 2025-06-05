@@ -11,6 +11,12 @@ The ESP32 turns an LED on and off for a defined period of time. This is a basic 
 - `sketch.ino` – Main code to blink the LED.
 - `diagram.json` – Wokwi circuit diagram (ESP32 + LED).
 - `wokwi-project-1.txt` – Optional notes or original simulation link.
+## 📸 Preview
+
+| Circuit | Code |
+|---------|------|
+| ![Circuit Diagram](media/diagram.png) | ![Code Screenshot](media/code.png) |
+
 
 ## ▶️ Run the Simulation
 
