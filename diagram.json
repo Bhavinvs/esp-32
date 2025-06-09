@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "author": "V S Bhavinkrishna",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 19.2, "left": -129.56, "attrs": {} },
+    {
+      "type": "wokwi-lcd2004",
+      "id": "lcd1",
+      "top": 44.8,
+      "left": 24.8,
+      "attrs": { "pins": "i2c" }
+    },
+    { "type": "wokwi-vcc", "id": "vcc1", "top": -18.44, "left": -9.6, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:GND.2", "lcd1:GND", "black", [ "v0", "h28.8", "v28.8" ] ],
+    [ "vcc1:VCC", "lcd1:VCC", "red", [ "v76.8" ] ],
+    [ "esp:21", "lcd1:SDA", "green", [ "h0" ] ],
+    [ "esp:22", "lcd1:SCL", "green", [ "h19.2", "v38.4" ] ]
+  ],
+  "dependencies": {}
+}
