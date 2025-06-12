@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "author": "V S Bhavinkrishna",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -9.6, "left": -52.76, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht1", "top": 9.9, "left": 109.8, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 186.65,
+      "left": 123.4,
+      "rotate": 180,
+      "attrs": { "value": "10000" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:3V3", "dht1:VCC", "green", [ "h0.15", "v-67.2", "h240", "v211.2", "h-67.2" ] ],
+    [ "dht1:GND", "esp:GND.2", "black", [ "v48", "h-86.4", "v-153.6" ] ],
+    [ "dht1:VCC", "r1:2", "red", [ "v0" ] ],
+    [ "r1:1", "dht1:SDA", "green", [ "v-38.4", "h-38.4" ] ],
+    [ "esp:4", "dht1:SDA", "green", [ "h86.4" ] ]
+  ],
+  "dependencies": {}
+}
