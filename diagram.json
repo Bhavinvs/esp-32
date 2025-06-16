@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -38.4, "left": 196.84, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo1", "top": 26.8, "left": -19.2, "attrs": {} },
+    { "type": "wokwi-vcc", "id": "vcc1", "top": 39.16, "left": -76.8, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "vcc1:VCC", "servo1:V+", "red", [ "v0" ] ],
+    [ "esp:GND.1", "servo1:GND", "black", [ "h-28.65", "v-86.4", "h-201.6", "v48" ] ],
+    [ "esp:5", "servo1:PWM", "green", [ "h28.8", "v124.8", "h-86.4" ] ]
+  ],
+  "dependencies": {}
+}
