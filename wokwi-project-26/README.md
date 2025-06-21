@@ -1,10 +1,15 @@
 # ESP32 Water Level Controller using Ultrasonic Sensor and LED
 
 💧 **Project Description**  
-This project simulates a basic water level controller using an ESP32 microcontroller and an HC-SR04 ultrasonic sensor. It measures the distance to the water surface inside a tank. If the water level is **too low** (distance > 180 cm), the LED (representing a water pump) is turned **off**. If the water level is **too high** (distance < 20 cm), the LED is turned **on** to stop further filling. This system prevents overflow and dry run conditions in a water tank.
+This project simulates a water level controller using an ESP32 and an HC-SR04 ultrasonic sensor placed at the **top of a water tank**. The sensor measures the distance to the water surface:
+
+- If the distance is **less than 20 cm** (tank is almost full), the LED (representing a motor or alert) is turned **on**.  
+- If the distance is **greater than 180 cm** (tank is almost empty), the LED is turned **off**.
+
+This system is ideal for automating water level monitoring and preventing tank overflow or dry-run conditions.
 
 📁 **Files in This Repository**  
-- `sketch.ino` – Arduino code to read distance and control the LED (motor simulation).  
+- `sketch.ino` – Arduino code to read water level and control the LED.  
 - `diagram.json` – Circuit layout for ESP32, ultrasonic sensor, and LED.  
 - `wokwi-project.txt` – Link to the Wokwi simulation for this project.  
 
@@ -13,14 +18,16 @@ You can simulate this project directly in your browser using Wokwi:
 
 👉 [Click here to open the simulation](https://wokwi.com/projects/433286448567659521)
 
-Use the virtual object slider to adjust the water level. When the distance is below 20 cm, the LED turns **on** (tank full). When it's above 180 cm, the LED turns **off** (tank empty).
+Use the object slider to simulate different water levels.  
+- When the object is **closer to the sensor (< 20 cm)** → LED turns **on**.  
+- When the object is **farther from the sensor (> 180 cm)** → LED turns **off**.
 
 🔧 **How to Customize**  
-- Adjust the distance thresholds in `sketch.ino` to fit your actual tank dimensions.  
-- Replace the LED with a relay module to control a real water pump.  
-- Add a buzzer or LCD display for alerts and status indication.
+- Modify the distance thresholds in `sketch.ino` to suit your tank’s dimensions.  
+- Replace the LED with a relay module to control an actual water pump or motor.  
+- Add serial output or an LCD display for real-time water level monitoring.
 
 📚 **Learning Focus**  
-- Measuring water level using ultrasonic distance sensing.  
-- Using conditional logic to control outputs (e.g., pump) based on sensor input.  
-- Simulating smart control systems with ESP32 for real-life applications.
+- Accurate water level detection using ultrasonic sensors.  
+- Conditional output control based on real-time sensor data.  
+- Simulating practical water management systems using ESP32.
