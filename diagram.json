@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "author": "BHAVIN KRISHNA V S",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 9.6, "left": 4.84, "attrs": {} },
+    { "type": "wokwi-hx711", "id": "cell1", "top": 69.8, "left": 233, "attrs": { "type": "5kg" } }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:GND.2", "cell1:GND", "black", [ "v0", "h120.04", "v67.2" ] ],
+    [ "esp:3V3", "cell1:VCC", "red", [ "h-62.21", "v182.4", "h278.4", "v-86.4" ] ],
+    [ "cell1:DT", "esp:16", "magenta", [ "h-115.2", "v28.3" ] ],
+    [ "esp:4", "cell1:SCK", "orange", [ "h52.84", "v-19.2", "h0", "v-9.6" ] ]
+  ],
+  "dependencies": {}
+}
