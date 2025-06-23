@@ -36,7 +36,7 @@ You can simulate this project directly in your browser using Wokwi:
 
 📦 **Libraries Used**  
 This project requires the following Arduino libraries:
-HX711
+HX711 , 
 LiquidCrystal I2C
 
 These are already included in the Wokwi simulation, but for local development, install them via the Arduino Library Manager.
