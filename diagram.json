@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "author": "BHAVIN KRISHNA V S ",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -19.2, "left": 52.84, "attrs": {} },
+    {
+      "type": "wokwi-stepper-motor",
+      "id": "stepper1",
+      "top": -5.99,
+      "left": 432.43,
+      "rotate": 90,
+      "attrs": { "size": "17" }
+    },
+    { "type": "wokwi-a4988", "id": "drv1", "top": 43.2, "left": 254.4, "attrs": {} },
+    { "type": "wokwi-vcc", "id": "vcc1", "top": 0.76, "left": 326.4, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd1", "top": 19.2, "left": 383.4, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "drv1:VMOT", "vcc1:VCC", "red", [ "h0" ] ],
+    [ "drv1:GND.2", "gnd1:GND", "black", [ "h57.75", "v-28.72" ] ],
+    [ "stepper1:B+", "drv1:1A", "green", [ "h0" ] ],
+    [ "stepper1:B-", "drv1:1B", "green", [ "h0" ] ],
+    [ "stepper1:A-", "drv1:2B", "green", [ "h0" ] ],
+    [ "stepper1:A+", "drv1:2A", "green", [ "h0" ] ],
+    [ "esp:3V3", "drv1:VDD", "red", [ "h-67.05", "v201.6", "h374.4", "v-86.4" ] ],
+    [ "esp:GND.1", "drv1:GND.1", "black", [ "h-28.65", "v67.2", "h307.2", "v-67.28" ] ],
+    [ "drv1:SLEEP", "drv1:RESET", "green", [ "h-28.8", "v-9.6" ] ],
+    [ "esp:5", "drv1:STEP", "orange", [ "h57.6", "v19.2" ] ],
+    [ "esp:4", "drv1:DIR", "blue", [ "h105.6" ] ]
+  ],
+  "dependencies": {}
+}
